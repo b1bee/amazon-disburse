@@ -1,0 +1,29 @@
+{
+  "timeZone": "Europe/Brussels",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/spreadsheets.currentonly",
+    "https://www.googleapis.com/auth/script.container.ui",
+    "https://www.googleapis.com/auth/spreadsheets"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Disburse for Amazon",
+      "logoUrl": "https://via.placeholder.com/150",
+      "useLocaleFromApp": true,
+      "openLinkUrlPrefixes": [],
+      "homepageTrigger": {
+        "enabled": true,
+        "runFunction": "onOpen"
+      }
+    },
+    "sheets": {
+      "homepageTrigger": {
+        "enabled": true,
+        "runFunction": "onOpen"
+      }
+    }
+  }
+}
