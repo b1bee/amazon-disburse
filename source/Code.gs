@@ -12,7 +12,7 @@ var formulas = [];
 var colorMapSpreadsheetId = '';
 
 function onOpen() {
-    SpreadsheetApp.getUi().createMenu('Custom Menu')
+    SpreadsheetApp.getUi().createMenu('Automation')
         .addItem('Create Disbursement Summary', 'generateReport')
         .addToUi();
 }
@@ -40,7 +40,7 @@ function createPivotTable(){
     console.log('createPivotTable...');
 
     const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-    const sheet = spreadsheet.getSheetByName('Sheet1'); // Change to the name of your source sheet
+    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0]; // Graping the first Sheet
     const range = sheet.getDataRange();
 
     // Find the column index where "amount-description" occurs in the first row
